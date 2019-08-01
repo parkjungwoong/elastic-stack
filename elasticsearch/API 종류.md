@@ -1,5 +1,5 @@
 # API 종류
-인덱스(색인된 데이터를 담을 그릇) 생성를 생성하고 document(색인 데이터)를 생성한다.\
+인덱스(색인된 데이터를 담을 그릇)를 생성하고 document(색인 데이터)를 생성한다.\
 이 후 색인된 데이터를 검색한다. 이러한 행위를 도와주는 REST API 제공한다. 
 
 ## 목차
@@ -22,13 +22,13 @@ PUT /인덱스명
   "mappings": {
     "properties": {
       "name": {
-        "type": "keyword" //단순 문자열의 경우
+        "type": "keyword" #단순 문자열의 경우
       },
       "age": {
         "type": "integer"
       },
       "addr": {
-        "type": "text" //형태소 분석이 필요한 경우
+        "type": "text" #형태소 분석이 필요한 경우
       }
     }
   }
