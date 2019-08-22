@@ -11,7 +11,7 @@
 [2019-08-22 23:08:18][REQID12345][INFO] testService.selectTest(...): test log
 ```
 - Grok 패턴
-``` json
+```
 grok {
    match => { "message" => "\[%{TIMESTAMP_ISO8601:timestamp}\]\[%{WORD:thread_id}\]\[%{LOGLEVEL:log_level}\]\s%{GREEDYDATA:message}"}
 }
@@ -34,7 +34,7 @@ grok {
 2019-08-22 23:08:18 ............
 ```
 - Grok 패턴
-``` json
+```
 grok {
    match => { "message" => "%{TIMESTAMP_ISO8601:timestamp}........"}
 }
@@ -52,7 +52,7 @@ date {
 ```
 - Grok 패턴\
 아래 예시는 filebeat 7.x버전대의 전송값으로 작성함, filebeat로 logstash로 받을 경우 file에 대한 정보도 같이 보냄을 이용해 날짜 정보 파싱
-``` json
+```
 //message: '...', log : { file : { path : '/log/api/debug.log.2019-08-22' } ..} ..}, .. 이런식으로 전송되었을 때
 grok {
    match => { "message" => "%{TIME:time}........"}
