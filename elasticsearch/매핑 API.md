@@ -4,6 +4,7 @@
 - [매핑 API](#매핑-API)
 - [고려사항](#고려사항)
 - [매핑 파라미터](#매핑-파라미터)
+- [매핑 탬플릿](#매핑-탬플릿)
 
 ## 매핑 API
 색인될 문서의 데이터 모델링, RDB의 스키마와 비슷한 개념\
@@ -57,4 +58,29 @@ document 안에 Field가 있고 Field는 데이터 타입과 메타데이터로 
 - enabled
     - 색인대상에서 제외하고 싶은 경우 false로 설정한다.
     - _source에는 포함되지만 검색은 되지 않는다.
-    
+
+## 매핑 탬플릿
+생성되는 인덱스가 인덱스명-YYYY-MM-DD와 같이 생성될 경우 매핑 템플릿을 사용하여 인덱스 매핑을 지정해줄 수 있다.
+
+```
+PUT _template/템블릿명
+{
+  #인덱스 패턴을 지정해줌
+  "index_patterns": ["te*", "bar*"], 
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  },
+  "mappings": {
+    ...
+  }
+}
+```
+- 지정된 필드외 다른 필드가 들어올 경우 무시하기 위한 옵션
+    - dynamic : true(허용), false(무시), static(에러, 인덱스 생성 안됨) 
+```
+"mappings": {
+    dynamic: false,
+    ...
+}
+```
