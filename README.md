@@ -17,3 +17,4 @@
 - [플러그인 개발 환경 설정](https://github.com/parkjungwoong/elastic-stack/blob/master/kibana/%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%20%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EC%84%A4%EC%A0%95.md)
 - [플러그인 개발 팁](https://github.com/parkjungwoong/elastic-stack/blob/master/kibana/%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%20%EA%B0%9C%EB%B0%9C%20%ED%8C%81.md)
 - [계정 설정](https://github.com/parkjungwoong/elastic-stack/blob/master/kibana/%EA%B3%84%EC%A0%95%20%EC%84%A4%EC%A0%95.md)
+- [트러블슈팅](https://github.com/parkjungwoong/elastic-stack/blob/master/kibana/%ED%8A%B8%EB%9F%AC%ED%94%8C%EC%8A%88%ED%8C%85.md)
